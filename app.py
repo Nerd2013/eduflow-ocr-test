@@ -3,6 +3,11 @@ import streamlit as st
 from PIL import Image
 import pytesseract
 
+
+# Set the path to the Tesseract executable
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+
+
 st.title("EduFlow OCR Test")
 
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
